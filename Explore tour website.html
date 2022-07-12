@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Open+Sans:wght@300&family=PT+Sans&family=Raleway:wght@100&family=Roboto+Slab:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Nunito:wght@500&family=Open+Sans:wght@300&family=PT+Sans&family=Raleway:wght@100&family=Roboto+Slab:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(255, 255, 255);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 3000px;
+        }
+
+        header::before{
+            /* background: url('https://images.pexels.com/photos/1118861/pexels-photo-1118861.jpeg') no-repeat center center/cover; */
+            background: url('https://images.unsplash.com/photo-1606055854326-12a2fdcac6c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover; 
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1.0;
+            
+
+        }
+        header{
+            border: 2px solid black;
+            height: 121px;
+            
+
+        }
+        .headContainer{
+            display: flex;
+            align-items: center;
+            height: 88px;
+            justify-content: space-between;
+            align-self: center;
+            padding-top: 20px;
+
+                
+        }
+        .logo-class{
+            display: inline-block;
+            /* justify-content: flex-start; */
+            padding-left: 80px;
+            font-size: 1px;
+
+        }
+        .elements{
+            /* justify-content: flex-end; */
+            padding-right: 90px;
+        }
+        ul{
+            display: flex;   
+        }
+        
+        .list{
+            list-style: none;
+            margin-left: 32px;
+            padding-right: 31px;
+            font-size: 18px;
+            justify-content: space-between;
+    
+        }
+
+        li a{
+            text-decoration: none;
+            color: black;
+            padding-left: 8px;
+            padding-right: 8px ;
+            justify-content: center;
+        }
+
+        li a:hover{
+            border: 2px solid black;
+            background-color: rgb(20, 20, 1);
+            color: white;
+            border-radius: 10px; 
+        }
+
+        /* .list:hover{
+            border: 2px solid black;
+        } */
+
+
+
+        .logo{
+            color: black;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .first-section{
+            border: 2px solid black;
+            height: 473px;
+            /* width: 100%; */
+        }
+        .first-section h1{
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 45px;
+            border: 2px solid black;
+            display: inline-block;
+            position: relative;
+            top: 90px;
+            left: 40px;
+
+        }
+
+        .search-fields{
+            position: relative;
+            top: 140px;
+            left: 24px;
+            width: 1000px;
+            display: flex;
+            justify-items: center;
+            justify-content: space-evenly;
+
+        }
+        #select-date{
+            height: 60px;
+            width: 345px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .select-date option{
+            font-size: 16px;
+            color: rgb(24, 22, 22);
+            border: none;
+        }
+
+        .search button{
+            height: 60px;
+            width: 250px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(77, 77, 203);
+        }
+        .search button a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            padding-left: 56px;
+            padding-right: 56px;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            color: white;
+            
+        }
+
+        .search button:hover{
+            background-color: white;
+            color: black;
+        }
+
+        .search button a:hover{
+            color: black;
+        }
+
+
+
+
+        .second-sub-section{
+            height: 500px;
+            margin: 63px;
+        }
+
+        .second-sub-section h1{
+            font-size: 40px;
+            font-family: 'Nunito', sans-serif;
+            /* display: inline-block; */
+            text-align: center;
+        
+            
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: space-evenly;
+            
+        }
+
+        .sub-container{
+            height: 358px;
+            width: 335px;
+            text-align: center;
+            margin: 5px;
+        }
+            
+        
+
+        .sub-container a img{
+            height: 215px;
+            width: 335px;
+        }
+        .day-night-price{
+            display: flex;
+            margin: 5px;
+            justify-content: space-between;
+
+        }
+        .link-first-sub-container div time{
+            font-size: 18px;
+            
+            color: gray;
+            text-decoration: none;
+        }
+
+        .link-first-sub-container{
+            text-decoration: none;
+        }
+
+        .link-first-sub-container h4{
+            color: black;
+            font-size: 20px;
+            
+        }
+
+        .link-first-sub-container div p{
+            font-size: 18px;
+            font-weight: bold;
+            color: #356ad8;
+
+
+        }
+
+        .sub-heading{
+            text-align: left;
+            font-weight: 600;
+            margin-top: 15px;
+            
+        }
+
+        .second-section{
+            height: 1000px;
+        }
+
+
+        .view_all_tours{
+            text-align: center;
+            
+        }
+
+        .view_all_tours button{
+            height: 62px;
+            width: 250px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(77, 77, 203);
+            border-radius: 5px;
+           
+        }
+        .view_all_tour_button{
+            text-decoration: none;
+            padding-left: 62px;
+            padding-right: 62px;
+            padding-top: 21px;
+            padding-bottom: 21px;
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 15px;
+        }
+
+        .view_all_tours button:hover{
+            background-color: #5e5e63; ;
+        }
+
+        .thired_about_sec{
+            height: 650px;
+            background-color: whitesmoke;
+        }
+        
+
+        .thired_sub_about_section{
+            display:  flex;
+            height: 350px;
+            margin: 91px;
+            justify-content: space-between;
+        
+            
+        }
+
+        .thired_sub_about_section div{
+            width: 350px;
+            
+        }
+
+        .owr_values{
+            font-family: 'Nunito', sans-serif;
+            padding: 5px;
+
+        }
+        .paragraph{
+            padding-top: 42px;
+            text-align: left;
+            padding-right: 114px;
+            font-size: 20px;
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            line-height: 1.55556;
+        
+        }
+
+        .read_more{
+
+            text-decoration: none;
+            padding-left: 52px;
+            padding-right: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;   
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 20px;
+        }
+
+
+        .read_more_button{
+            
+            height: 49px;
+            width: 200px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(112 112 221);
+            border-radius: 5px;
+           
+        }
+        
+
+
+        /* display: flex;
+            align-items: center;
+            height: 88px;
+            justify-content: space-between;
+            align-self: center;
+            padding-top: 20px; */
+
+
+
+        
+
+
+
+
+
+        
+        
+
+       
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headContainer" id="headContain">
+            <div class="logo-class">
+                  
+                <a href="#" class="logo"><img src="https://livedemo00.template-help.com/wt_prod-23203/images/logo-default-513x98.png" alt="" width="250"></a>
+            </div>
+            <div class="elements">
+                <ul class="headerlist">
+                    <li class="list" id="list-1"><a href="#" class="home">HOME</a></li>
+                    <li class="list" id="list-2"><a href="#" class="home">FLIGHTS</a></li>
+                    <li class="list" id="list-3"><a href="#" class="home">SERVICES</a></li>
+                    <li class="list" id="list-4"><a href="#" class="home">CONTACT</a></li>
+                    <li class="list" id="list-5"><a href="#" class="home">ABOUT US</a></li>
+                </ul> 
+            </div>
+        </div>
+    </header>
+    <section class="first-section">
+        <h1>The Best Trips Around Iceland <br>Begin With Us</h1>
+        <div class="search-fields">
+            <div class="date">
+                <select name="select-date" id="select-date" class="select-date">
+                    <option  value="">Date</option>
+                    <option  value="">May 15, 2019</option>
+                    <option  value="">June 1, 2019</option>
+                    <option  value="">July 19, 2022</option>
+                </select>
+            </div>
+            <div class="your-price-range">
+                <select name="select-date" id="select-date" class="select-date">
+                    <option value="">Your Price Range</option>
+                    <option value="">Date</option>
+                    <option value="">Date</option>
+                    <option value="">Date</option>
+                </select>
+            </div>
+            <div class="search">
+                <button>
+                    <a href="" class="search-tours">SEARCH TOURS</a>
+                </button>
+            </div>
+
+        </div>
+    </section>
+    <section class="second-section">
+        <div class="second-sub-section">
+            <h1 class="best-sellers">Best Sellers</h1>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <div class="sub-container" id="first-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-1-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">7 days/6 nights</time>
+                            <p class="first-sub-price">From $1000</p>
+                        </div>
+                        <h4 class="sub-heading" id="first-sub-heading">Winter Wonders and Delicious<br>Detours</h4>
+                    </a>
+
+                </div>
+                <div class="sub-container" id="second-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-2-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">3 days/2 nights</time>
+                            <p class="first-sub-price">From $500</p>
+                        </div>
+                        <h4 class="sub-heading" id="second-sub-heading">South Shore and Glacier Lagoon<br>Mini-Tour</h4>
+                    </a>
+                </div>
+                <div class="sub-container" id="thired-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-3-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">1 nights</time>
+                            <p class="first-sub-price">From $800</p>
+                        </div>
+                        <h4 class="sub-heading" id="thired-sub-heading">Northern Lights Mystery</h4>
+                    </a>
+                </div>
+
+                <div class="sub-container" id="first-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-4-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">3 days/2 nights</time>
+                            <p class="first-sub-price">From $500</p>
+                        </div>
+                        <h4 class="sub-heading" id="first-sub-heading">Golden Circle Tour</h4>
+                    </a>
+
+                </div>
+                <div class="sub-container" id="second-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-5-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">1 nights</time>
+                            <p class="first-sub-price">From $800</p>
+                        </div>
+                        <h4 class="sub-heading" id="second-sub-heading">South Iceland Winter Explorer -<br>Super Jeep Adventure</h4>
+                    </a>
+                </div>
+                <div class="sub-container" id="thired-sub">
+                    <a href="#" class="link-first-sub-container">
+                        <img src="https://livedemo00.template-help.com/wt_prod-23203/images/grid-gallery-6-370x260.jpg" alt="">
+                        <div class="day-night-price">
+                            <time class="first-sub-DT" datetime="2022">7 days/6 nights</time>
+                            <p class="first-sub-price">From $1000</p>
+                        </div>
+                        <h4 class="sub-heading" id="thired-sub-heading">South Iceland Express Road Trip</h4>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="view_all_tours">
+                <button>
+                <a href="" class="view_all_tour_button">VIEW ALL TOURS</a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="thired_about_sec">hello
+        <div class="thired_sub_about_section">
+            <div class="first_sub_containers">
+                <h2 class="owr_values">Our Values</h2>
+                <p class="paragraph">Since our foundation, ExploreTour has been the leading tour agency in Iceland, offering top-quality services. We take great pride in our diverse portfolio of tours in Iceland. We also offer high quality tours and experiences.</p>
+                <br>
+               <button class="read_more_button">
+                <a href="" class="read_more">Read More</a>
+               </button>
+            </div>
+            <div class="second_sub_containers">
+                <h2 class ="destinations">Destinations</h2>
+            </div>
+            <div class="thired_sub_containers">hello </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>
